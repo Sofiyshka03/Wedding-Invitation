@@ -1,0 +1,217 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #f9c4cf, #f3bcbf);
+    color: #333;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.header .date {
+    font-size: 1.5em;
+    color: #fff;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.countdown {
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5em;
+    color: #333;
+    animation: zoomIn 1s ease-in-out;
+}
+
+#timer div {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#timer div:hover {
+    transform: scale(1.1);
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#details {
+    background-color: #fff;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.detail {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.detail h3 {
+    color: #b03c52;
+}
+
+.detail:hover {
+    transform: translateY(-10px);
+}
+
+#gallery {
+    background-color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.gallery-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+#rsvp form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+#rsvp label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#rsvp input, #rsvp select, #rsvp textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#rsvp input:focus, #rsvp select:focus, #rsvp textarea:focus {
+    border-color: #b03c52;
+}
+
+#rsvp button {
+    padding: 12px;
+    border: none;
+    background-color: #b03c52;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#rsvp button:hover {
+    background-color: #d0556b;
+}
+
+#contacts {
+    background-color: #f3bcbf;
+    padding: 50px 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+#contacts p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.telegram-link {
+    color: #2a9d8f;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.telegram-link:hover {
+    color: #f4a261;
+}
+
+.footer {
+    background-color: #b03c52;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
