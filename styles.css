@@ -110,7 +110,15 @@ body {
 
 
 
-
+.description{
+    background-image: url("back4.png"); /* Замените на путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    position: relative;
+}
 
 
 
@@ -121,7 +129,8 @@ body {
     text-align: center;
     padding: 60px 20px;
     animation: fadeIn 2s ease-in-out;
-    margin: 50pt;
+    margin-top: 40pt;
+    margin-bottom: 0;
 
 }
 
@@ -143,7 +152,7 @@ body {
 }
 
 .countdown {
-    margin-top: 20px;
+    margin-top: 80px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -264,7 +273,7 @@ section {
 }
 
 #contacts {
-    background-color: #f3bcbf;
+    background-color: rgb(53,157,157,0.5);
     padding: 5px 10px;
     animation: fadeInUp 2s ease-in-out;
 }
@@ -276,8 +285,7 @@ section {
 }
 
 .telegram-link {
-    color: #2a9d8f;
-    /*font-size: 1.2em;*/
+    color: #b03c52;
     text-decoration: none;
     transition: color 0.3s ease;
     margin: 0;
@@ -287,13 +295,13 @@ section {
     color: #f4a261;
 }
 
-.footer {
+/*.footer {
     background-color: #b03c52;
     color: white;
     text-align: center;
     padding: 20px;
     animation: fadeIn 2s ease-in-out;
-}
+}*/
 
 /* Анимации */
 @keyframes fadeIn {
@@ -437,11 +445,17 @@ section {
     body {
         background-size: cover; /* Подгоняет фон под экран планшета */
     }
+    .description {
+        background-size: cover; /* Подгоняет фон под экран планшета */
+    }
 }
 
 @media screen and (max-width: 768px) {
     body {
         background-size: 100% auto; /* Горизонтальная адаптация для средних экранов */
+    }
+    .description {
+        background-size: 100% auto; /* Подгоняет фон под экран планшета */
     }
 }
 
@@ -450,11 +464,19 @@ section {
         background: url('back3.png') no-repeat center top; /* Позиционирование фона для мобильных устройств */
         background-size: auto 30%; /* Вертикальная адаптация для маленьких экранов */
     }
+    .description {
+        background: url('back4.png') no-repeat center top; /* Позиционирование фона для мобильных устройств */
+        background-size: auto 100%; /* Вертикальная адаптация для маленьких экранов */
+    }
 
 }
 
 @media screen and (orientation: landscape) and (max-width: 768px) {
     body {
+        background: url('back3.png') no-repeat center center fixed;
+        background-size: contain; /* Для ландшафтной ориентации на мобильных устройствах */
+    }
+    description {
         background: url('back3.png') no-repeat center center fixed;
         background-size: contain; /* Для ландшафтной ориентации на мобильных устройствах */
     }
