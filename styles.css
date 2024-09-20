@@ -1,14 +1,117 @@
 /* Основные стили */
 body {
-    font-family: 'Arial', sans-serif;
+    /*font-family: Tahoma, Geneva, sans-serif;*/
+    font-size: 14px;
     margin: 0;
     padding: 0;
-    background-image: url('back2.png'); /* Замените на путь к вашему изображению */
+    background-image: url("back3.png"); /* Замените на путь к вашему изображению */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     overflow-x: hidden;
+    position: relative;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 300;
+    font-style: normal;
+
 }
+
+.content {
+    /*background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title-block {
+    position: relative;
+
+}
+
+.subtitle {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 9pt;
+    line-height: 1.5em;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.names {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32pt;
+    line-height: 1.5em;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.1em;
+    position: relative;////
+
+
+}
+
+.names .name {
+    display: block;
+    text-align: center;
+    position: absolute;/////
+
+}
+
+.name:first-child {
+    top: -0.7em; /* Поднимет "Ринат" над знаком "&" */
+}
+.name:last-child {
+    top: 0.5em; /* Опустит "Динара" под знаком "&" */
+}
+
+.names .and {
+    display: inline-block;
+    position: relative;
+    z-index: -1; /* Поместит знак "&" под именами */
+    color: rgb( 212, 175, 55,0.4); /* Цвет символа "&" */
+    font-size: 7rem;
+}
+
+.date {
+    font-size: 20pt;
+    font-family: "Great Vibes", cursive;
+    font-weight: 50;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    /*line-height: inherit;
+    letter-spacing: 0em;
+    text-align: center;*/
+}
+
+.invite {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 9pt;
+    line-height: 1.5em;
+    color: #000000;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 
 .header {
@@ -17,20 +120,23 @@ body {
     text-align: center;
     padding: 60px 20px;
     animation: fadeIn 2s ease-in-out;
+    margin: 50pt;
+
 }
 
 .header h1 {
     /*font-family: Apple Chancery, cursive;*/
     font-style: italic;
     font-size: 3em;
-    margin: 0;
+    /*margin: 0;
     /*color: #fff;*/
     animation: fadeInDown 1s ease-in-out;
 }
 
+
 .header .date {
 
-    font-size: 1.5em;
+    /*font-size: 1.5em;
     /*color: #fff;*/
     animation: fadeInUp 1s ease-in-out;
 }
@@ -45,8 +151,19 @@ body {
     justify-content: center;
     gap: 20px;
     font-size: 1.2em;
-    color: #333;
+    color: #000000;
     animation: zoomIn 1s ease-in-out;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#timer span{
+    font-size: 1.5em;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 #timer div {
@@ -72,6 +189,14 @@ section {
     animation: slideIn 1.5s ease-in-out;
 }
 
+#details h2{
+    font-family: "Great Vibes", cursive;
+    font-weight: 50;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 20pt;
+}
+
 .details-container {
     display: flex;
     justify-content: center;
@@ -87,6 +212,7 @@ section {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     animation: fadeInUp 1s ease-in-out;
+    font-size: 12pt;
     /*animation: zoomIn 1.5s ease-in-out;*/
 }
 
@@ -105,6 +231,14 @@ section {
     flex-wrap: wrap;
 }
 
+#welcome h2{
+    font-family: "Great Vibes", cursive;
+    font-weight: 50;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 30pt;
+}
+
 .welcome {
     background-color: rgb(249,249,249,0.7);
     padding: 20px;
@@ -113,31 +247,39 @@ section {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     animation: zoomIn 1.5s ease-in-out;
+    font-size: 12pt;
 }
 
 .welcome:hover {
     transform: scale(1.1);
 }
 
-
+#contacts h2{
+    font-family: "Great Vibes", cursive;
+    font-weight: 50;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 15pt;
+}
 
 #contacts {
     background-color: #f3bcbf;
-    padding: 20px 20px;
+    padding: 5px 10px;
     animation: fadeInUp 2s ease-in-out;
 }
 
 #contacts p {
     margin-bottom: 20px;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     color: #333;
 }
 
 .telegram-link {
     color: #2a9d8f;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     text-decoration: none;
     transition: color 0.3s ease;
+    margin: 0;
 }
 
 .telegram-link:hover {
@@ -184,14 +326,14 @@ section {
 }
 
 /* Статичный фон с нежными цветами */
-body {
+/*body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fafafa;
     overflow-x: hidden;
     position: relative;
-}
+}*/
 
 /* Анимация бабочек */
 @keyframes flutter {
